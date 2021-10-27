@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+class EmiCalculator{
+    public static void main(String[] args) {
+        Scanner a = new Scanner(System.in);
+        //input: 
+        System.out.println("Enter the principal amount.");
+        double loanAmount = a.nextDouble();
+
+        System.out.println("Enter the monthly rate of interest.");
+        double rateOfInterest = a.nextDouble()/100;
+
+        System.out.println("Enter the number of months.");
+        double Tenure = a.nextDouble();//Enter as number of months. Ex: 5 years == 60 months;
+
+        //process:
+           double E = (loanAmount * rateOfInterest) * Math.pow((1 + rateOfInterest),Tenure) / Math.pow((1 + rateOfInterest),Tenure) - 1;
+
+        //output:
+            System.out.println("EMI: " + E);
+    }
+}
