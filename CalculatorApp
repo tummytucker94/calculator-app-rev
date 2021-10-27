@@ -1,0 +1,40 @@
+/*
+   Create a calculator application that prompts for the input of two numbers and an arithmetical operation and displays the results on screen.
+*/
+import java.util.Scanner;
+
+public class calculatorApp
+{
+	public static void main(String[] args) {
+		Scanner userIN = new Scanner(System.in);
+    
+        //input:
+		System.out.println("Enter First Number...");
+        int num1 = userIN.nextInt();
+       // System.out.println(num1);
+
+	    System.out.println("Enter Second Number...");
+        int num2 = userIN.nextInt();
+        //System.out.println(num2);
+
+		//process
+		System.out.println("Which operation do you want to perform?");
+        String operation = userIN.next().toLowerCase();
+
+        switch (operation){
+            case "add":
+                System.out.println(num1 + num2);
+                break;
+            case "subtract":
+                System.out.println(num1 - num2);
+                break;
+            case "multiply":
+                System.out.println(num1 * num2);
+                break;
+            case "divide":
+                System.out.println(num1 / num2);
+                break;
+        }   
+    
+	}
+}
